@@ -1,0 +1,244 @@
+*,
+:after,
+:before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  -webkit-text-size-adjust: none;
+  -webkit-tap-highlight-color: transparent;
+  -ms-text-size-adjust: none;
+  outline: none;
+}
+body {
+  margin: 0px;
+  padding: 0px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.header{
+  display: flex;
+  background-color: rgb(170, 200, 167);
+  width: 100%;
+  height: 80px;
+  align-items: center;
+  border-bottom: 3px solid rgb(180, 174, 158);
+}
+.navbarlist{
+  display: flex;
+  list-style: none;
+  float: right;
+  justify-content: space-between;
+  text-decoration: none;
+}
+.navbar{
+  margin-right: 100px;
+  width: 90%;
+  height: 80px;
+  align-items: center;
+  margin-bottom: 45px;
+  margin-top: 30px;
+}
+.logoimage{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-top: 4px;
+    margin-left: 30px;
+    border-bottom: 2px solid brown;
+}
+.navbarli{
+  padding: 30px;
+  font-size: 18px;
+  margin-right: -20px;
+}
+.Search{
+  height: 130px;
+  position: absolute;
+  width: 100%;
+  background-color: rgb(212, 226, 212);
+}
+.searchInput{
+  position: relative;
+  margin-top: 50px;
+  height: 35px;
+  width: 600px;
+  border: 0.5px solid black;
+  font-size: 15px;
+  float: left;
+  margin-left: 320px;
+}
+.searchbutton{
+    position: relative;
+    float: left;
+    margin-top: 50px;
+    height: 35px;
+    width: 140px;
+    border-radius: 2px;
+    border: 0.05px solid black;
+}
+.card{
+  height: 380px;
+  width: 230px;
+  background-color: rgb(245, 245, 245);
+  margin: 10px;
+  border-radius: 10px;
+  word-wrap: break-word;
+}
+.cardimage{
+  height: 200px;
+  width: 230px;
+  border-radius: 10px 10px 0px 0px;
+
+}
+.cardcomponent{
+  background-color: rgb(212, 226, 212);
+  width: 100%;
+  height: auto;
+  margin-top: 120px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 10px;
+}
+.foodname{
+  position: absolute;
+  margin-top: 1px;
+  margin-left: 10px;
+  font-size: 15px;
+  word-spacing: normal;
+}
+.foodstar{
+    position: absolute;
+    margin-top: 25px;
+    margin-left: 10px;
+    font-size: 15px;
+}
+.foodflouver{
+    position: absolute;
+    margin-top: 35px;
+    font-size: 12px;
+    font-family: 'Courier New', 'Courier', monospace;
+    overflow-wrap: break-all;
+    width: 200px;
+    float: left;
+}
+.address{
+    position: absolute;
+    margin-top: 100px;
+    margin-left: 10px;
+    font-size: 12px;
+    font-family: 'Courier New', 'Courier', monospace;
+}
+.Card:hover{
+  box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.5);
+  transform: scale(1.1);
+}
+.shimmer-container {
+  display:flex;
+  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 10px;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+.shimmer {
+  height: 300px;
+  width: 200px;
+  border-radius: 10px;
+  background-color:white;
+  border: 1px solid rgb(238, 238, 238)
+}
+.divImg{
+  height: 200px;
+  width: 200px;
+  border-radius: 10px 10px 0px 0px;
+  background-color: rgb(238, 238, 238);
+}
+
+.btn{
+  padding: 5px;
+  width: 100px;
+}
+a{
+  text-decoration: none;
+  color: black;
+}
+.restaurantInfo {
+  position: relative;
+  height: 80px;
+  width: 70%;
+  margin-top: 30px;
+  white-space: normal;
+  align-items: center;
+  margin-left: 100px;
+}
+.res{
+  position: absolute;
+  height: auto;
+  background-color: rgb(241, 240, 232);
+  width: 70%;
+  margin-top: 50px;
+  white-space: normal;
+  align-items: center;
+  margin-left: 200px;
+}
+.resImage{
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  float: left;
+  margin-left: 20px;
+  margin-top: 5px;
+}
+.resName{
+  float: left;
+  margin-left: 20px;
+  margin-top: 15px;
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+.resCuisines{
+    position: absolute;
+    margin-left: 110px;
+    margin-top: 50px;
+    font-size: 10px;
+    font-weight: bold;
+    word-spacing: 5px;
+    letter-spacing: 2px;
+}
+.cardData{
+  width: 80%;
+  height: 100px;
+  margin-left: 100px;
+}
+.cardImageclass{
+  margin-left: 100px;
+}
+.imgclass{
+  height: 70px;
+    width: 70px;
+  border-radius: 50%;
+  margin-top: 10px;
+  float: right;
+  margin-right: 80px;
+}
+.aboutImg{
+  height: 200px;
+  width: 200px;
+  border-radius: 20%;
+}
