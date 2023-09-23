@@ -1,10 +1,11 @@
 import React from "react";
 import { CDNlink } from "../Utils/Constants";
 
-export default function Card(props) {
+function Card(props) {
   const { resData } = props;
   const { cloudinaryImageId, name, avgRating, cuisines, areaName } =
     resData.info;
+  console.log(resData.isOpen);
   return (
     <>
       <div className="card">
@@ -24,3 +25,16 @@ export default function Card(props) {
     </>
   );
 }
+
+export const UseOpenLabel = (Card) => {
+  return (props) => {
+    console.log(props);
+    return (
+      <div>
+        <label className="isOpenClass">Open</label>
+        <Card {...props} />
+      </div>
+    );
+  };
+};
+export default Card;

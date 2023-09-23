@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 *,
 :after,
 :before {
@@ -188,7 +192,7 @@ a{
 }
 .res{
   position: absolute;
-  height: auto;
+  height: 110px;
   background-color: rgb(241, 240, 232);
   width: 70%;
   margin-top: 50px;
@@ -201,7 +205,6 @@ a{
   width: 70px;
   border-radius: 50%;
   float: left;
-  margin-left: 20px;
   margin-top: 5px;
 }
 .resName{
@@ -241,4 +244,78 @@ a{
   height: 200px;
   width: 200px;
   border-radius: 20%;
+}
+.isOpenClass{
+  position: absolute;
+  background-color: black;
+  color: white;
+  margin-left: -120px;
+}
+.category{
+  width: 6/12;
+  height: auto;
+  padding-top: 5px;
+  margin-top: 8px;
+  background-color: #F1F6F9;
+}
+.categoryItem{
+  background-color: #CEDEBD;
+height: 50px;
+justify-content: space-between;
+  display: flex;
+  margin-top: -5px;
+}
+.itemCards{
+  font-size: medium;
+  font-weight: bold;
+  margin-left: 10px;
+  margin-top: 12px;
+}
+.categoryButton{
+    width: 100%;
+    height: 40px;
+    justify-content: space-between;
+    display: flex;
+}
+.arrowdown{
+  margin-right: 10px;
+}
+.maindiv{
+  height: auto;
+  width: 100%;
+}
+.productDetails{
+  height: 120px;
+  width: 99%;
+  text-align: left;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  margin-left: 3px;
+  border-bottom: 1px solid black;
+}
+.productimg{
+  float: right;
+  height: 80px;
+  width: 80px;
+  justify-items: center;
+  margin-top: -75px;
+  margin-right: 10px;
+}
+.productimg img{
+  margin-top: 10px;
+  border-radius: 10px;
+}
+.prductdescription{
+  width: 80%;
+}
+.prductdescription.span{
+  font-size: small;
+}
+.productDetailsspan{
+  font-size: medium;
+  font-weight: bold;
+}
+.dropdownbutton{
+  margin-top: 12px;
+  margin-right: 15px;
 }

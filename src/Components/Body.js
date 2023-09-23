@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import Card from "./Card";
+import Card, { UseOpenLabel } from "./Card";
 import resObj from "../Utils/MockData";
 import Shimmer from "./Shimmer";
 import { Link } from "react-router-dom";
@@ -7,7 +7,7 @@ export default function Body() {
   const [restaurantData, setrestaurantData] = useState(null);
   const [filterData, setFilterData] = useState(null);
   const [inputvalue, setInputValue] = useState("");
-
+  const IsOpenRest = UseOpenLabel(Card);
   function findTopRatedFunction() {
     const restaurantTopRated = restaurantData.filter(
       (resturentrating) => resturentrating.info.avgRating >= 4
@@ -48,7 +48,6 @@ export default function Body() {
         ?.restaurants
     );
   };
-  console.log(filterData);
   if (restaurantData === null && filterData === null) {
     return <Shimmer />;
   }
@@ -80,7 +79,12 @@ export default function Body() {
       <div className="cardcomponent">
         {filterData?.map((resturent) => (
           <Link to={"/restaurant/" + resturent.info.id}>
-            <Card key={resturent.info.id} resData={resturent} />
+            {/* <Card key={resturent.info.id} resData={resturent} /> */}
+            {resturent.info.isOpen ? (
+              <IsOpenRest key={resturent.info.id} resData={resturent} />
+            ) : (
+              <Card key={resturent.info.id} resData={resturent} />
+            )}
           </Link>
         ))}
       </div>

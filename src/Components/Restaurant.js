@@ -6,9 +6,13 @@ import useRestaurantData from "../Utils/useRestaurantData";
 
 export default function Restaurant() {
   const { resId } = useParams();
-  const { resData, resDetails } = useRestaurantData(resId);
-
-  console.log(resDetails);
+  const { resData, resDetails, resCategory } = useRestaurantData(resId);
+  const categories = resCategory.filter(
+    (c) =>
+      c.card?.card?.["@type"] ===
+      "type.googleapis.com/swiggy.presentation.food.v2.ItemCategory"
+  );
+  // console.log(categories[0]?.card?.card?.itemCards[0]?.card?.info);
   return (
     <div className="res">
       <div className="restaurantInfo">
@@ -28,12 +32,8 @@ export default function Restaurant() {
         </p>
       </div>
       <hr />
-      {resDetails?.map((resturent) => (
-        <RestaurantCard
-          imageId={resturent?.card?.info.imageId}
-          name={resturent?.card?.info.name}
-          price={resturent?.card?.info.description}
-        />
+      {categories?.map((resturent) => (
+        <RestaurantCard data={resturent?.card?.card} />
       ))}
     </div>
   );
